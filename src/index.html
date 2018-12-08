@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="http://localhost:8080/src/css/index.css">
+    <title>Document</title>
+</head>
+<body>
+<h1>共嗨世界杯</h1>
+<div id="pitch" class="football-pitch">
+
+    <div class="lines">
+        <div class="halfway-line"></div>
+        <div class="center-circle"></div>
+        <div class="center-spot"></div>
+        <div class="penalty-area-container-left">
+            <div class="penalty-arc"></div>
+        </div>
+
+    <div class="penalty-area-left"></div>
+    <div class="penalty-spot-left"></div>
+    <div class="goal-spot-left"></div>
+    <div class="corner-area-left-top"></div>
+    <div class="corner-area-left-bottom"></div>
+        <div class="penalty-area-container-right">
+            <div class="penalty-arc"></div>
+        </div>
+    <div class="penalty-area-right"></div>
+    <div class="penalty-spot-right"></div>
+    <div class="goal-spot-right"></div>
+    <div class="corner-area-right-top"></div>
+    <div class="corner-area-right-bottom"></div>
+    </div>
+
+    <div class="schedules">
+        <div class="match-vs16 match-49">1A - 2B</div>
+        <div class="match-vs16 match-50">1C - 2D</div>
+        <div class="match-vs16 match-51">1B - 2A</div>
+        <div class="match-vs16 match-52">1D - 2C</div>
+        <div class="match-vs16 match-53">1E - 2F</div>
+        <div class="match-vs16 match-54">1G - 2H</div>
+        <div class="match-vs16 match-55">1F - 2E</div>
+        <div class="match-vs16 match-56">1H - 2G</div>
+        <div class="match-vs8 match-57">W49 - W50</div>
+        <div class="match-vs8 match-58">W53 - W54</div>
+        <div class="match-vs8 match-59">W51 - W52</div>
+        <div class="match-vs8 match-60">W55 - W56</div>
+        <div class="match-vs4 match-61">W57 - W58</div>
+        <div class="match-vs4 match-62">W59 - W60</div>
+        <div class="match-vs2 match-63">L61 - L62</div>
+        <div class="match-vs2 match-64">W63 - W64</div>
+    </div>
+
+    <div class="canvas-container">
+        <div id="ball" class="ball" style="display: none; position: absolute; top: 0; left: 0;"></div>
+        <canvas id="canvas" width="1000" height="500"></canvas>
+    </div>
+
+</div>
+<script src="http://localhost:8080/src/js/index.js"></script>
+<script>
+    window.onload = function(){
+        document.getElementById('pitch').className = 'football-pitch ready';
+        football.play();
+    }
+</script>
+</body>
+</html>

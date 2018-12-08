@@ -1,0 +1,340 @@
+html,
+body,
+div {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #ccc;
+}
+
+h1 {
+	text-align: center;
+	color: #ff6600;
+}
+
+.football-pitch {
+	position: relative;
+	width: 1000px;
+	height: 500px;
+	margin: 40px auto;
+	background: url("../image/turf.jpeg") repeat;
+	border: 4px solid #e1e1e1;
+	overflow: hidden;
+}
+
+.football-pitch .lines {
+	opacity: 0;
+	-webkit-transition: opacity 1.2s ease-in-out;
+	transition: opacity 1.2s ease-in-out;
+}
+
+.football-pitch .lines .halfway-line {
+	position: absolute;
+	top: 0;
+	left: 498px;
+	width: 4px;
+	height: 500px;
+	background-color: #e1e1e1;
+}
+
+.football-pitch .lines .center-circle {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 196px;
+	left: 446px;
+	border: 4px solid #e1e1e1;
+	border-radius: 50%;
+}
+
+.football-pitch .lines .center-spot {
+	position: absolute;
+	top: 245px;
+	left: 495px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+.football-pitch .lines .penalty-area-container-left {
+	position: absolute;
+	top: 196px;
+	left: 141px;
+	width: 25px;
+	height: 100px;
+	overflow: hidden;
+}
+
+.football-pitch .lines .penalty-area-container-left .penalty-arc {
+	float: right;
+	width: 100px;
+	height: 100px;
+	border: 4px solid #e1e1e1;
+	border-radius: 50%;
+}
+
+.football-pitch .lines .penalty-area-left {
+	position: absolute;
+	left: -4px;
+	top: 96px;
+	width: 140px;
+	height: 300px;
+	border: 4px solid #e1e1e1;
+}
+
+.football-pitch .lines .penalty-spot-left {
+	position: absolute;
+	left: 91px;
+	top: 245px;
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+.football-pitch .lines .goal-spot-left {
+	position: absolute;
+	left: -4px;
+	top: 196px;
+	width: 60px;
+	height: 100px;
+	border: 4px solid #e1e1e1;
+}
+
+.football-pitch .lines .corner-area-left-bottom {
+	position: absolute;
+	left: -8px;
+	bottom: -8px;
+	width: 16px;
+	height: 16px;
+	border: 4px solid #e1e1e1;
+	border-radius: 50%;
+}
+
+.football-pitch .lines .corner-area-left-top {
+	position: absolute;
+	left: -8px;
+	top: -8px;
+	width: 16px;
+	height: 16px;
+	border: 4px solid #e1e1e1;
+	border-radius: 50%;
+}
+
+.football-pitch .lines .penalty-area-container-right {
+	position: absolute;
+	top: 196px;
+	right: 141px;
+	width: 25px;
+	height: 100px;
+	overflow: hidden;
+}
+
+.football-pitch .lines .penalty-area-container-right .penalty-arc {
+	float: left;
+	width: 100px;
+	height: 100px;
+	border: 4px solid #e1e1e1;
+	border-radius: 50%;
+}
+
+.football-pitch .lines .penalty-area-right {
+	position: absolute;
+	right: -4px;
+	top: 96px;
+	width: 140px;
+	height: 300px;
+	border: 4px solid #e1e1e1;
+}
+
+.football-pitch .lines .penalty-spot-right {
+	position: absolute;
+	right: 91px;
+	top: 245px;
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+.football-pitch .lines .goal-spot-right {
+	position: absolute;
+	right: -4px;
+	top: 196px;
+	width: 60px;
+	height: 100px;
+	border: 4px solid #e1e1e1;
+}
+
+.football-pitch .lines .corner-area-right-bottom {
+	position: absolute;
+	right: -8px;
+	bottom: -8px;
+	width: 16px;
+	height: 16px;
+	border: 4px solid #e1e1e1;
+	border-radius: 50%;
+}
+
+.football-pitch .lines .corner-area-right-top {
+	position: absolute;
+	right: -8px;
+	top: -8px;
+	width: 16px;
+	height: 16px;
+	border: 4px solid #e1e1e1;
+	border-radius: 50%;
+}
+
+.football-pitch .schedules div {
+	position: absolute;
+	text-align: center;
+	border-radius: 6px;
+	top: 600px;
+	-webkit-transition: top 1.2s ease-in-out;
+	transition: top 1.2s ease-in-out;
+}
+
+.football-pitch.ready .lines {
+	opacity: 1;
+}
+
+.football-pitch.ready .schedules .match-vs16 {
+	width: 150px;
+	height: 60px;
+	background-color: #f1c40f;
+	color: #f9f9f9;
+	line-height: 60px;
+	text-align: center;
+}
+
+.football-pitch.ready .schedules .match-vs8 {
+	width: 150px;
+	height: 60px;
+	background-color: #f39c12;
+	color: #f9f9f9;
+	line-height: 60px;
+	text-align: center;
+}
+
+.football-pitch.ready .schedules .match-vs4 {
+	width: 120px;
+	height: 80px;
+	background-color: #e67e22;
+	color: #f9f9f9;
+	line-height: 80px;
+	text-align: center;
+}
+
+.football-pitch.ready .schedules .match-vs2 {
+	width: 120px;
+	height: 40px;
+	background-color: #d35400;
+	color: #f9f9f9;
+	line-height: 40px;
+	text-align: center;
+}
+
+.football-pitch.ready .schedules .match-49 {
+	left: 20px;
+	top: 40px;
+}
+
+.football-pitch.ready .schedules .match-50 {
+	left: 20px;
+	top: 140px;
+}
+
+.football-pitch.ready .schedules .match-51 {
+	right: 20px;
+	top: 40px;
+}
+
+.football-pitch.ready .schedules .match-52 {
+	right: 20px;
+	top: 140px;
+}
+
+.football-pitch.ready .schedules .match-53 {
+	left: 20px;
+	top: 300px;
+}
+
+.football-pitch.ready .schedules .match-54 {
+	left: 20px;
+	top: 400px;
+}
+
+.football-pitch.ready .schedules .match-55 {
+	right: 20px;
+	top: 300px;
+}
+
+.football-pitch.ready .schedules .match-56 {
+	right: 20px;
+	top: 400px;
+}
+
+.football-pitch.ready .schedules .match-57 {
+	left: 180px;
+	top: 80px;
+}
+
+.football-pitch.ready .schedules .match-58 {
+	left: 180px;
+	top: 340px;
+}
+
+.football-pitch.ready .schedules .match-59 {
+	right: 180px;
+	top: 80px;
+}
+
+.football-pitch.ready .schedules .match-60 {
+	right: 180px;
+	top: 340px;
+}
+
+.football-pitch.ready .schedules .match-61 {
+	left: 280px;
+	top: 200px;
+}
+
+.football-pitch.ready .schedules .match-62 {
+	right: 280px;
+	top: 200px;
+}
+
+.football-pitch.ready .schedules .match-63 {
+	left: 440px;
+	top: 260px;
+}
+
+.football-pitch.ready .schedules .match-64 {
+	right: 440px;
+	top: 200px;
+	background-color: #c0392b;
+}
+
+.canvas-container {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1000px;
+	height: 500px;
+	z-index: 9999;
+}
+
+.canvas-container .ball {
+	display: none;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.canvas-container canvas {
+	display: none;
+}
